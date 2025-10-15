@@ -55,6 +55,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -76,6 +78,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
@@ -125,7 +128,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
+  m_Radius: 1
 --- !u!50 &6097732451497736012
 Rigidbody2D:
   serializedVersion: 5
@@ -166,7 +169,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AIRB: {fileID: 0}
-  AIMaxMoveSpeed: 10
+  AIMaxMoveSpeed: 25
+  AIEasyMoveSpeed: 25
+  AIMediumMoveSpeed: 35
+  AIHardMoveSpeed: 45
   AIMaxMoveSpeedPercentage: 0.4
   PuckRB: {fileID: 0}
   AIPlayerBoundaries: {fileID: 0}
