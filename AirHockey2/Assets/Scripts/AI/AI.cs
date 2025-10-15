@@ -71,7 +71,6 @@ public class AI : MonoBehaviour
             MoveSpeed = Random.Range(AIMaxMoveSpeed * AIMaxMoveSpeedPercentage, AIMaxMoveSpeed);
             TargetPos = new Vector2(Mathf.Clamp(PuckRB.position.x + XOffset, AIPlayerBounds.Left, AIPlayerBounds.Right),
                 Mathf.Clamp(PuckRB.position.y, AIPlayerBounds.Down, AIPlayerBounds.Up));
-            Debug.Log("AI Moved to the Puck");
         }
 
         AIRB.MovePosition(Vector2.MoveTowards(AIRB.position, TargetPos, MoveSpeed * Time.fixedDeltaTime));

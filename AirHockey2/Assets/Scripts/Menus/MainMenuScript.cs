@@ -25,6 +25,11 @@ public class MainMenuScript : MonoBehaviour
     public int MaxPointsToWin;
     public AudioManager AM;
 
+
+    private void Awake()
+    {
+        Time.timeScale = 1f;
+    }
     void Start()
     {
         HomeScreenPanel.SetActive(true);
@@ -65,13 +70,6 @@ public class MainMenuScript : MonoBehaviour
 
     public void PlayGame()
     {
-
-        PrefabUtility.SaveAsPrefabAsset(SkinManager.BGSkin, "Assets/Prefabs/Selected Skins/Selected Background.prefab");
-        PrefabUtility.SaveAsPrefabAsset(SkinManager.BGBorder1Skin, "Assets/Prefabs/Selected Skins/Selected Background Border 1.prefab");
-        PrefabUtility.SaveAsPrefabAsset(SkinManager.BGBorder2Skin, "Assets/Prefabs/Selected Skins/Selected Background Border 2.prefab");
-        PrefabUtility.SaveAsPrefabAsset(SkinManager.Paddle1Skin, "Assets/Prefabs/Selected Skins/Selected Player 1 Paddle.prefab");
-        PrefabUtility.SaveAsPrefabAsset(SkinManager.Paddle2Skin, "Assets/Prefabs/Selected Skins/Selected Player 2 Paddle.prefab");
-        PrefabUtility.SaveAsPrefabAsset(SkinManager.PuckSkin, "Assets/Prefabs/Selected Skins/Selected Puck.prefab");
         SceneManager.LoadScene(SceneToPlay);
     }
     public void SelectPlayMode()

@@ -10,9 +10,11 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        
         for (int i = 0; i < Input.touchCount; i++)
         {
             Vector2 TouchWorldPos = Camera.main.ScreenToWorldPoint(Input.GetTouch(i).position);
+
             foreach (var Player in Players)
             {
                 if(Player.LockedFingerID == null)
@@ -21,13 +23,16 @@ public class PlayerController : MonoBehaviour
                     {
                         Player.LockedFingerID = Input.GetTouch(i).fingerId;
                     }
-                    else if(Player.LockedFingerID == Input.GetTouch(i).fingerId)
+                }
+                else if (Player.LockedFingerID == Input.GetTouch(i).fingerId)
+                {
+                    Player.MoveToPosition(TouchWorldPos);
+                    Debug.Log("Touch Move");
+                    if (Input.GetTouch(i).phase == TouchPhase.Ended || Input.GetTouch(i).phase == TouchPhase.Canceled)
                     {
-                        Player.MoveToPosition(TouchWorldPos);
-                        if(Input.GetTouch(i).phase == TouchPhase.Ended || Input.GetTouch(i).phase == TouchPhase.Canceled)
-                        {
-                            Player.LockedFingerID = null;
-                        }
+                        Debug.Log("Finger ID cleared");
+                        Player.LockedFingerID = null;
+
                     }
                 }
             }

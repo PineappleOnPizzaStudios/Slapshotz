@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 951a73ba4f89e5a4289ebcaca726dd3d, type: 3}
+  m_Name: New Skin Database
+  m_EditorClassIdentifier: Assembly-CSharp::SkinDatabase
+  SI:
+  - BackgroundName: Standard
+    BackgroundSprite: {fileID: -8753643385412410743, guid: 24178ea9dc3e41740bd0c22bc6f53b6d, type: 3}
+    BackgroundBorder1Sprite: {fileID: 92313151726187419, guid: 17d050c04fa9bd9449a2a348c9e88c06, type: 3}
+    BackgroundBorder2Sprite: {fileID: 4359398083222347490, guid: 17d050c04fa9bd9449a2a348c9e88c06, type: 3}
+    Player1PaddleSprite: {fileID: 3422070906063786798, guid: ac3b0c1fab5caf941b0b1aeeafc583c0, type: 3}
+    Player2PaddleSprite: {fileID: 7414558623599924140, guid: ff0f0d1b4967f514c9b7db2dc9ce1f15, type: 3}
+    PuckSprite: {fileID: -7604588086372915697, guid: a162a83b9835bfa47908f10c89c5d1f8, type: 3}
+  - BackgroundName: Black and White
+    BackgroundSprite: {fileID: -2319283703258433963, guid: 87161c8348a320941a213174eae85112, type: 3}
+    BackgroundBorder1Sprite: {fileID: 3308568231531072150, guid: e11ce006a74d97a4fba866107f70ed62, type: 3}
+    BackgroundBorder2Sprite: {fileID: -5433272112310726283, guid: e11ce006a74d97a4fba866107f70ed62, type: 3}
+    Player1PaddleSprite: {fileID: 1072921750900271918, guid: 3eefbdbbb6a220e468d52e3c78a8f2fe, type: 3}
+    Player2PaddleSprite: {fileID: 1629942398342347330, guid: 5ef92ecdb2b1c36478c6f02467cf9a50, type: 3}
+    PuckSprite: {fileID: -3342924173107197332, guid: f79627b5627d82144a7e8c1682a451d7, type: 3}
+  - BackgroundName: Neon
+    BackgroundSprite: {fileID: 2956654000758483312, guid: e1d12f685f35d9646bef1695369b336b, type: 3}
+    BackgroundBorder1Sprite: {fileID: -6393986201118103216, guid: a71b8a8f3a58e6c4c8fb6a1503ff4849, type: 3}
+    BackgroundBorder2Sprite: {fileID: -1900513335031624079, guid: a71b8a8f3a58e6c4c8fb6a1503ff4849, type: 3}
+    Player1PaddleSprite: {fileID: -8575844226185126511, guid: fc718a1ade5467c4296a818cadb4cb64, type: 3}
+    Player2PaddleSprite: {fileID: 5903838471540484737, guid: e13532ccff502214cb15d0848a233cd3, type: 3}
+    PuckSprite: {fileID: -5844632336805828126, guid: 45b053fbce88445409ec97cd84e05f04, type: 3}
+  - BackgroundName: Stone Soccer
+    BackgroundSprite: {fileID: -7818061912700982783, guid: 38fd0606a3391f544b2b124b4c1323d6, type: 3}
+    BackgroundBorder1Sprite: {fileID: -7267640011218192752, guid: a6ae5572a2ab0234db099a113bc0b5f0, type: 3}
+    BackgroundBorder2Sprite: {fileID: -5566469168232137947, guid: a6ae5572a2ab0234db099a113bc0b5f0, type: 3}
+    Player1PaddleSprite: {fileID: -8683361351362332275, guid: 8146ba8a16437974cb43458d9847ba8f, type: 3}
+    Player2PaddleSprite: {fileID: 6329979491609755099, guid: 5b8da31206bc60046b77618a2edec4fa, type: 3}
+    PuckSprite: {fileID: -3579174905430104754, guid: 329bab8b40b0fe147a646b7202441d4b, type: 3}
+  - BackgroundName: Bowling Alley
+    BackgroundSprite: {fileID: 2571074664553004225, guid: e770d4b8e785e1447b0d361f1bffcda9, type: 3}
+    BackgroundBorder1Sprite: {fileID: 3094589514974217378, guid: 5669ba3421b91364a9fa945b295407d8, type: 3}
+    BackgroundBorder2Sprite: {fileID: 3148304257356624745, guid: 5669ba3421b91364a9fa945b295407d8, type: 3}
+    Player1PaddleSprite: {fileID: 1954964924602822466, guid: 6a86e16f170bb0c4ca8c8c954680afc2, type: 3}
+    Player2PaddleSprite: {fileID: -880842936931443931, guid: f068573d06975624ab845b55cab1d9e7, type: 3}
+    PuckSprite: {fileID: -5236879514898973663, guid: 9a123d2f24ae598438f9c2798ba4928f, type: 3}

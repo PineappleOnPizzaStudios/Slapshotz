@@ -16,25 +16,23 @@ public class GameManager : MonoBehaviour
     public GameObject Player2WinScreen;
     public GameObject PauseButton;
 
-    public GameObject SelectedBGSkin;
-    public GameObject SelectedBorder1Skin;
-    public GameObject SelectedBorder2Skin;
-    public GameObject SelectedPaddle1Skin;
-    public GameObject SelectedPaddle2Skin;
-    public GameObject SelectedPuckSkin;
-    public GameObject BGSkin;
-    public GameObject Border1Skin;
-    public GameObject Border2Skin;
-    public GameObject Paddle1Skin;
-    public GameObject Paddle2Skin;
-    public GameObject PuckSkin;
-    private Sprite BGSprite;
-    private Sprite BGBorder1Sprite;
-    private Sprite BGBorder2Sprite;
-    private Sprite Paddle1Sprite;
-    private Sprite Paddle2Sprite;
-    private Sprite PuckSprite;
+    public SkinDatabase SDB;
+    private int SelectedBGSkin;
+    private int SelectedPaddleSkin;
+    private int SelectedPuckSkin;
+    public SpriteRenderer BGSprite;
+    public SpriteRenderer BGBorder1;
+    public SpriteRenderer BGBorder2;
+    public SpriteRenderer Paddle1Sprite;
+    public SpriteRenderer Paddle2Sprite;
+    public SpriteRenderer PuckSprite;
 
+    private void Awake()
+    {
+        Time.timeScale = 1f;
+        Application.targetFrameRate = 60;
+        QualitySettings.vSyncCount = 1;
+    }
     void Start()
     {
         Player1WinScreen.SetActive(false);
@@ -44,30 +42,34 @@ public class GameManager : MonoBehaviour
 
         ScoreToWinText.text = "PTS TO WIN: " + GameValues.PointsToWin;
 
-        BGSprite = SelectedBGSkin.GetComponent<SpriteRenderer>().sprite;
-        BGSkin.GetComponent<SpriteRenderer>().sprite = BGSprite;
+        if (!PlayerPrefs.HasKey("Selected BG Option"))
+        {
+            SelectedBGSkin = 0;
+        }
+        else
+        {
+            Load();
+        }
+        if (!PlayerPrefs.HasKey("Selected Paddle Option"))
+        {
+            SelectedPaddleSkin = 0;
+        }
+        else
+        {
+            Load();
+        }
+        if (!PlayerPrefs.HasKey("Selected Puck Option"))
+        {
+            SelectedPaddleSkin = 0;
+        }
+        else
+        {
+            Load();
+        }
+        UpdateBackground(SelectedBGSkin);
+        UpdatePaddle(SelectedPaddleSkin);
+        UpdatePuck(SelectedPuckSkin);
 
-        BGBorder1Sprite = SelectedBorder1Skin.GetComponent<SpriteRenderer>().sprite;
-        Border1Skin.GetComponent<SpriteRenderer>().sprite = BGBorder1Sprite;
-
-        BGBorder2Sprite = SelectedBorder2Skin.GetComponent<SpriteRenderer>().sprite;
-        Border2Skin.GetComponent<SpriteRenderer>().sprite = BGBorder2Sprite;
-
-        Paddle1Sprite = SelectedPaddle1Skin.GetComponent<SpriteRenderer>().sprite;
-        Paddle1Skin.GetComponent<SpriteRenderer>().sprite = Paddle1Sprite;
-
-        Paddle2Sprite = SelectedPaddle2Skin.GetComponent<SpriteRenderer>().sprite;
-        Paddle2Skin.GetComponent<SpriteRenderer>().sprite = Paddle2Sprite;
-
-        PuckSprite = SelectedPuckSkin.GetComponent<SpriteRenderer>().sprite;
-        PuckSkin.GetComponent <SpriteRenderer>().sprite = PuckSprite;
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void UpdatePlayer1Score()
@@ -91,5 +93,30 @@ public class GameManager : MonoBehaviour
             Player2WinScreen.SetActive(true);
             PauseButton.SetActive(false);
         }
+    }
+
+    private void UpdateBackground(int SelectedBGOption)
+    {
+        SkinInformation BGRef = SDB.GetSkin(SelectedBGOption);
+        BGSprite.sprite = BGRef.BackgroundSprite;
+        BGBorder1.sprite = BGRef.BackgroundBorder1Sprite;
+        BGBorder2.sprite = BGRef.BackgroundBorder2Sprite;
+    }
+    private void UpdatePaddle(int SelectedPaddleOption)
+    {
+        SkinInformation PaddleRef = SDB.GetSkin(SelectedPaddleOption);
+        Paddle1Sprite.sprite = PaddleRef.Player1PaddleSprite;
+        Paddle2Sprite.sprite = PaddleRef.Player2PaddleSprite;
+    }
+    private void UpdatePuck(int SelectedPuckOption)
+    {
+        SkinInformation PuckRef = SDB.GetSkin(SelectedPuckOption);
+        PuckSprite.sprite = PuckRef.PuckSprite;
+    }
+    private void Load()
+    {
+        SelectedBGSkin = PlayerPrefs.GetInt("Selected BG Option");
+        SelectedPaddleSkin = PlayerPrefs.GetInt("Selected Paddle Option");
+        SelectedPuckSkin = PlayerPrefs.GetInt("Selected Puck Option");
     }
 }

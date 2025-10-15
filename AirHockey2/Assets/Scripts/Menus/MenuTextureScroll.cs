@@ -1,21 +1,27 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-[RequireComponent (typeof(Image))]
+[RequireComponent (typeof(RawImage))]
 public class MenuTextureScroll : MonoBehaviour
 {
-    public float ScrollSpeed;
-    public Vector2 ScrollDirection;
+    [Header("Scrolling Settings")]
+    public float ScrollSpeed = 0.1f;
+    public Vector2 ScrollDirection = Vector2.right;
 
-    public Image ScrollImage;
+    private RawImage ScrollImage;
 
-    private void Start()
+    private void Awake()
     {
-        ScrollImage = GetComponent<Image>();
+        ScrollImage = GetComponent<RawImage>();
     }
-    void Update()
+
+    private void Update()
     {
-        ScrollImage.material.mainTextureOffset += -ScrollDirection.normalized * Time.deltaTime * ScrollSpeed;
-       
+        if (ScrollImage != null)
+        {
+            Rect Rect = ScrollImage.uvRect;
+            Rect.position += -ScrollDirection.normalized * Time.unscaledDeltaTime * ScrollSpeed;
+            ScrollImage.uvRect = Rect;
+        }
     }
 }

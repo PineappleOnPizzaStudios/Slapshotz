@@ -6,37 +6,21 @@ using UnityEditor;
 
 public class SkinManager : MonoBehaviour
 {
+    public SkinDatabase SDB;
     [Header("Background and Border Sprites")]
     public SpriteRenderer BGSprite;
     public SpriteRenderer BGBorder1Sprite;
     public SpriteRenderer BGBorder2Sprite;
-    public List<Sprite> BGSkins = new List<Sprite>();
-    public List<Sprite> BGBorder1Skins = new List<Sprite>();
-    public List<Sprite> BGBorder2Skins = new List<Sprite>();
-    private int SelectedBGSkin;
-    private int SelectedBGBorder1Skin;
-    private int SelectedBGBorder2Skin;
-    public GameObject BGSkin;
-    public GameObject BGBorder1Skin;
-    public GameObject BGBorder2Skin;
+    public int SelectedBGSkin;
 
-    [Header("Paddle 1 Sprites")]
+    [Header("Paddle Sprites")]
     public SpriteRenderer Paddle1Sprite;
-    public List<Sprite> Paddle1Skins = new List<Sprite>();
-    private int SelectedPaddle1Skin;
-    public GameObject Paddle1Skin;
-
-    [Header("Paddle 2 Sprites")]
+    public int SelectedPaddleSkin;
     public SpriteRenderer Paddle2Sprite;
-    public List<Sprite> Paddle2Skins = new List<Sprite>();
-    private int SelectedPaddle2Skin;
-    public GameObject Paddle2Skin;
 
     [Header("Puck Sprites")]
     public SpriteRenderer PuckSprite;
-    public List <Sprite> PuckSkins = new List<Sprite>();
-    private int SelectedPuckSkin;
-    public GameObject PuckSkin;
+    public int SelectedPuckSkin;
 
     [Header("General")]
 
@@ -44,7 +28,33 @@ public class SkinManager : MonoBehaviour
 
     void Start()
     {
-        
+        if(!PlayerPrefs.HasKey("Selected BG Option"))
+        {
+            SelectedBGSkin = 0;
+        }
+        else
+        {
+            Load();
+        }
+        if (!PlayerPrefs.HasKey("Selected Paddle Option"))
+        {
+            SelectedPaddleSkin = 0;
+        }
+        else
+        {
+            Load();
+        }
+        if (!PlayerPrefs.HasKey("Selected Puck Option"))
+        {
+            SelectedPuckSkin = 0;
+        }
+        else
+        {
+            Load();
+        }
+        UpdateBackground(SelectedBGSkin);
+        UpdatePaddle(SelectedPaddleSkin);
+        UpdatePuck(SelectedPuckSkin);
     }
 
     void Update()
@@ -56,85 +66,103 @@ public class SkinManager : MonoBehaviour
     {
         AM.PlayUINoise();
         SelectedBGSkin++;
-        SelectedBGBorder1Skin++;
-        SelectedBGBorder2Skin++;
-        if(SelectedBGSkin == BGSkins.Count)
+        if (SelectedBGSkin >= SDB.SkinCount)
         {
             SelectedBGSkin = 0;
-            SelectedBGBorder1Skin = 0;
-            SelectedBGBorder2Skin = 0;
         }
-        BGSprite.sprite = BGSkins[SelectedBGSkin];
-        BGBorder1Sprite.sprite = BGBorder1Skins[SelectedBGBorder1Skin];
-        BGBorder2Sprite.sprite = BGBorder2Skins[SelectedBGBorder2Skin];
+        UpdateBackground(SelectedBGSkin);
+        Save();
     }
 
     public void PrevBGSkinOption()
     {
         AM.PlayUINoise();
         SelectedBGSkin--;
-        SelectedBGBorder1Skin--;
-        SelectedBGBorder2Skin--;
         if (SelectedBGSkin < 0)
         {
-            SelectedBGSkin = BGSkins.Count - 1;
-            SelectedBGBorder1Skin = BGBorder1Skins.Count - 1;
-            SelectedBGBorder2Skin = BGBorder2Skins.Count - 1;
+            SelectedBGSkin = SDB.SkinCount - 1;
         }
 
-        BGSprite.sprite = BGSkins[SelectedBGSkin];
-        BGBorder1Sprite.sprite = BGBorder1Skins[SelectedBGBorder1Skin];
-        BGBorder2Sprite.sprite = BGBorder2Skins[SelectedBGBorder2Skin];
-
+        UpdateBackground(SelectedBGSkin);
+        Save();
     }
 
     public void NextPaddleSkinOption()
     {
         AM.PlayUINoise();
-        SelectedPaddle1Skin++;
-        SelectedPaddle2Skin++;
-        if(SelectedPaddle1Skin == Paddle1Skins.Count && SelectedPaddle2Skin == Paddle2Skins.Count)
+        SelectedPaddleSkin++;
+        if (SelectedPaddleSkin >= SDB.SkinCount)
         {
-            SelectedPaddle1Skin = 0;
-            SelectedPaddle2Skin = 0;
+            SelectedPaddleSkin = 0;
         }
-        Paddle1Sprite.sprite = Paddle1Skins[SelectedPaddle1Skin];
-        Paddle2Sprite.sprite = Paddle2Skins[SelectedPaddle2Skin];
+        UpdatePaddle(SelectedPaddleSkin);
+        Save();
     }
     public void PrevPaddleSkinOption()
     {
         AM.PlayUINoise();
-        SelectedPaddle1Skin--;
-        SelectedPaddle2Skin--;
-        if (SelectedPaddle1Skin < 0 && SelectedPaddle2Skin < 0)
+        SelectedPaddleSkin--;
+        if (SelectedPaddleSkin < 0)
         {
-            SelectedPaddle1Skin = Paddle1Skins.Count - 1;
-            SelectedPaddle2Skin = Paddle2Skins.Count - 1;
-
+            SelectedPaddleSkin = SDB.SkinCount - 1;
         }
-        Paddle1Sprite.sprite = Paddle1Skins[SelectedPaddle1Skin];
-        Paddle2Sprite.sprite = Paddle2Skins[SelectedPaddle2Skin];
+        UpdatePaddle(SelectedPaddleSkin);
+        Save();
     }
 
     public void NextPuckOption()
     {
         AM.PlayUINoise();
         SelectedPuckSkin++;
-
-        if(SelectedPuckSkin == PuckSkins.Count)
+        if (SelectedPuckSkin >= SDB.SkinCount)
         {
             SelectedPuckSkin = 0;
         }
-        PuckSprite.sprite = PuckSkins[SelectedPuckSkin];
+        UpdatePuck(SelectedPuckSkin); 
+        Save();
     }
     public void PrevPuckOption()
     {
         AM.PlayUINoise();
         SelectedPuckSkin--;
 
-        if(SelectedPuckSkin < 0)
+        if (SelectedPuckSkin < 0)
         {
-            SelectedPuckSkin = PuckSkins.Count - 1;
+            SelectedPuckSkin = SDB.SkinCount - 1;
         }
+        UpdatePuck(SelectedPuckSkin);
+        Save();
+    }
+
+    private void UpdateBackground(int SelectedBGOption)
+    {
+        SkinInformation BGRef = SDB.GetSkin(SelectedBGOption);
+        BGSprite.sprite = BGRef.BackgroundSprite;
+        BGBorder1Sprite.sprite = BGRef.BackgroundBorder1Sprite;
+        BGBorder2Sprite.sprite = BGRef.BackgroundBorder2Sprite;
+    }
+    private void UpdatePaddle(int SelectedPaddleOption)
+    {
+        SkinInformation PaddleRef = SDB.GetSkin(SelectedPaddleOption);
+        Paddle1Sprite.sprite = PaddleRef.Player1PaddleSprite;
+        Paddle2Sprite.sprite = PaddleRef.Player2PaddleSprite;
+    }
+    private void UpdatePuck(int SelectedPuckOption)
+    {
+        SkinInformation PuckRef = SDB.GetSkin(SelectedPuckOption);
+        PuckSprite.sprite = PuckRef.PuckSprite;
+    }
+
+    private void Save()
+    {
+        PlayerPrefs.SetInt("Selected BG Option", SelectedBGSkin);
+        PlayerPrefs.SetInt("Selected Paddle Option", SelectedPaddleSkin);
+        PlayerPrefs.SetInt("Selected Puck Option", SelectedPuckSkin);
+    }
+    private void Load()
+    {
+        SelectedBGSkin = PlayerPrefs.GetInt("Selected BG Option");
+        SelectedPaddleSkin = PlayerPrefs.GetInt("Selected Paddle Option");
+        SelectedPuckSkin = PlayerPrefs.GetInt("Selected Puck Option");
     }
 }

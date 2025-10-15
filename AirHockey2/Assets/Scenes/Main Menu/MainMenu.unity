@@ -480,6 +480,8 @@ GameObject:
   - component: {fileID: 198331615}
   - component: {fileID: 198331614}
   - component: {fileID: 198331619}
+  - component: {fileID: 198331622}
+  - component: {fileID: 198331621}
   m_Layer: 5
   m_Name: UI Canvas
   m_TagString: Untagged
@@ -592,7 +594,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1375762481}
+  - {fileID: 488735815}
   - {fileID: 1174687184}
   - {fileID: 472501666}
   - {fileID: 1353247988}
@@ -617,55 +619,55 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d92b33d0fc18a14799c017a4a5d33dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SDB: {fileID: 11400000, guid: 3d05112be9d197a42b18d7770a25392b, type: 2}
   BGSprite: {fileID: 810264045}
   BGBorder1Sprite: {fileID: 6823911938064495956}
   BGBorder2Sprite: {fileID: 1459750862262058574}
-  BGSkins:
-  - {fileID: -8753643385412410743, guid: 24178ea9dc3e41740bd0c22bc6f53b6d, type: 3}
-  - {fileID: -2319283703258433963, guid: 87161c8348a320941a213174eae85112, type: 3}
-  - {fileID: 2956654000758483312, guid: e1d12f685f35d9646bef1695369b336b, type: 3}
-  - {fileID: -7818061912700982783, guid: 38fd0606a3391f544b2b124b4c1323d6, type: 3}
-  - {fileID: 2571074664553004225, guid: e770d4b8e785e1447b0d361f1bffcda9, type: 3}
-  BGBorder1Skins:
-  - {fileID: 92313151726187419, guid: 17d050c04fa9bd9449a2a348c9e88c06, type: 3}
-  - {fileID: 3308568231531072150, guid: e11ce006a74d97a4fba866107f70ed62, type: 3}
-  - {fileID: -6393986201118103216, guid: a71b8a8f3a58e6c4c8fb6a1503ff4849, type: 3}
-  - {fileID: -7267640011218192752, guid: a6ae5572a2ab0234db099a113bc0b5f0, type: 3}
-  - {fileID: 3094589514974217378, guid: 5669ba3421b91364a9fa945b295407d8, type: 3}
-  BGBorder2Skins:
-  - {fileID: 4359398083222347490, guid: 17d050c04fa9bd9449a2a348c9e88c06, type: 3}
-  - {fileID: -5433272112310726283, guid: e11ce006a74d97a4fba866107f70ed62, type: 3}
-  - {fileID: -1900513335031624079, guid: a71b8a8f3a58e6c4c8fb6a1503ff4849, type: 3}
-  - {fileID: -5566469168232137947, guid: a6ae5572a2ab0234db099a113bc0b5f0, type: 3}
-  - {fileID: 3148304257356624745, guid: 5669ba3421b91364a9fa945b295407d8, type: 3}
-  BGSkin: {fileID: 810264043}
-  BGBorder1Skin: {fileID: 6823911938064495955}
-  BGBorder2Skin: {fileID: 1459750862262058573}
+  SelectedBGSkin: 0
   Paddle1Sprite: {fileID: 1641345048}
-  Paddle1Skins:
-  - {fileID: 3422070906063786798, guid: ac3b0c1fab5caf941b0b1aeeafc583c0, type: 3}
-  - {fileID: 1072921750900271918, guid: 3eefbdbbb6a220e468d52e3c78a8f2fe, type: 3}
-  - {fileID: -8575844226185126511, guid: fc718a1ade5467c4296a818cadb4cb64, type: 3}
-  - {fileID: -8683361351362332275, guid: 8146ba8a16437974cb43458d9847ba8f, type: 3}
-  - {fileID: 1954964924602822466, guid: 6a86e16f170bb0c4ca8c8c954680afc2, type: 3}
-  Paddle1Skin: {fileID: 2430620996963953759}
+  SelectedPaddleSkin: 0
   Paddle2Sprite: {fileID: 2116529857}
-  Paddle2Skins:
-  - {fileID: 7414558623599924140, guid: ff0f0d1b4967f514c9b7db2dc9ce1f15, type: 3}
-  - {fileID: 1629942398342347330, guid: 5ef92ecdb2b1c36478c6f02467cf9a50, type: 3}
-  - {fileID: 5903838471540484737, guid: e13532ccff502214cb15d0848a233cd3, type: 3}
-  - {fileID: 6329979491609755099, guid: 5b8da31206bc60046b77618a2edec4fa, type: 3}
-  - {fileID: -880842936931443931, guid: f068573d06975624ab845b55cab1d9e7, type: 3}
-  Paddle2Skin: {fileID: 5710455404035813562}
   PuckSprite: {fileID: 674756117}
-  PuckSkins:
-  - {fileID: -7604588086372915697, guid: a162a83b9835bfa47908f10c89c5d1f8, type: 3}
-  - {fileID: -7604588086372915697, guid: a162a83b9835bfa47908f10c89c5d1f8, type: 3}
-  - {fileID: -5844632336805828126, guid: 45b053fbce88445409ec97cd84e05f04, type: 3}
-  - {fileID: -3579174905430104754, guid: 329bab8b40b0fe147a646b7202441d4b, type: 3}
-  - {fileID: -5236879514898973663, guid: 9a123d2f24ae598438f9c2798ba4928f, type: 3}
-  PuckSkin: {fileID: 448647553296416195}
+  SelectedPuckSkin: 0
   AM: {fileID: 1679478676}
+--- !u!114 &198331621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 198331613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &198331622
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 198331613}
+  m_CullTransparentMesh: 1
 --- !u!1 &233228540
 GameObject:
   m_ObjectHideFlags: 0
@@ -1329,6 +1331,7 @@ GameObject:
   - component: {fileID: 417537465}
   - component: {fileID: 417537464}
   - component: {fileID: 417537463}
+  - component: {fileID: 417537466}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Event
@@ -1343,7 +1346,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 417537462}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
   m_Name: 
@@ -1397,6 +1400,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &417537466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 417537462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.StandaloneInputModule
+  m_SendPointerHoverToParent: 1
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
 --- !u!1 &472501663
 GameObject:
   m_ObjectHideFlags: 0
@@ -1475,6 +1498,93 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &488735814
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 488735815}
+  - component: {fileID: 488735818}
+  - component: {fileID: 488735817}
+  - component: {fileID: 488735816}
+  m_Layer: 5
+  m_Name: Background (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &488735815
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 488735814}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 198331618}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &488735816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 488735814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26b5394b1e46b4e419a7e559e4b993b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MenuTextureScroll
+  ScrollSpeed: 0.075
+  ScrollDirection: {x: 1, y: -1}
+--- !u!114 &488735817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 488735814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.RawImage
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.69803923, g: 0.065254435, b: 0.065254435, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Texture: {fileID: 2800000, guid: ef6ce21fa1320654c9ca24af3f07294f, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!222 &488735818
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 488735814}
+  m_CullTransparentMesh: 1
 --- !u!1 &543251107
 GameObject:
   m_ObjectHideFlags: 0
@@ -1791,6 +1901,7 @@ GameObject:
   - component: {fileID: 631009990}
   - component: {fileID: 631009989}
   - component: {fileID: 631009988}
+  - component: {fileID: 631009991}
   m_Layer: 5
   m_Name: Prev Puck
   m_TagString: Untagged
@@ -1912,6 +2023,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 631009986}
   m_CullTransparentMesh: 1
+--- !u!114 &631009991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 631009986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb097c07812299498915a0a3e793843, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: LeanTouch::Lean.Touch.LeanFingerDown
+  ignoreStartedOverGui: 1
+  requiredButtons: -1
+  requiredSelectable: {fileID: 0}
+  onFinger:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 198331619}
+        m_TargetAssemblyTypeName: SkinManager, Assembly-CSharp
+        m_MethodName: PrevPuckOption
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  ScreenDepth:
+    Conversion: 1
+    Camera: {fileID: 0}
+    Object: {fileID: 0}
+    Layers:
+      serializedVersion: 2
+      m_Bits: 4294967291
+    Distance: 0
+  onWorld:
+    m_PersistentCalls:
+      m_Calls: []
+  onScreen:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &670463796
 GameObject:
   m_ObjectHideFlags: 0
@@ -2010,6 +2165,7 @@ GameObject:
   - component: {fileID: 701698662}
   - component: {fileID: 701698661}
   - component: {fileID: 701698660}
+  - component: {fileID: 701698663}
   m_Layer: 5
   m_Name: Pts to Win Down
   m_TagString: Untagged
@@ -2131,6 +2287,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 701698658}
   m_CullTransparentMesh: 1
+--- !u!114 &701698663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 701698658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb097c07812299498915a0a3e793843, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: LeanTouch::Lean.Touch.LeanFingerDown
+  ignoreStartedOverGui: 1
+  requiredButtons: -1
+  requiredSelectable: {fileID: 0}
+  onFinger:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 198331614}
+        m_TargetAssemblyTypeName: MainMenuScript, Assembly-CSharp
+        m_MethodName: DecreasePointsToWin
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  ScreenDepth:
+    Conversion: 1
+    Camera: {fileID: 0}
+    Object: {fileID: 0}
+    Layers:
+      serializedVersion: 2
+      m_Bits: 4294967291
+    Distance: 0
+  onWorld:
+    m_PersistentCalls:
+      m_Calls: []
+  onScreen:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &724699802
 GameObject:
   m_ObjectHideFlags: 0
@@ -2576,11 +2776,6 @@ RectTransform:
   m_AnchoredPosition: {x: 200, y: -150}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &810264043 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5307496810762219317, guid: ed394ac2f99df854ea839e4c08ebdcc5, type: 3}
-  m_PrefabInstance: {fileID: 5373795290124206719}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &810264044 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8266239071467644464, guid: ed394ac2f99df854ea839e4c08ebdcc5, type: 3}
@@ -4218,6 +4413,7 @@ GameObject:
   - component: {fileID: 1327504019}
   - component: {fileID: 1327504018}
   - component: {fileID: 1327504021}
+  - component: {fileID: 1327504022}
   m_Layer: 5
   m_Name: Play Button
   m_TagString: Untagged
@@ -4379,6 +4575,50 @@ MonoBehaviour:
   references:
     version: 2
     RefIds: []
+--- !u!114 &1327504022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1327504016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb097c07812299498915a0a3e793843, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: LeanTouch::Lean.Touch.LeanFingerDown
+  ignoreStartedOverGui: 1
+  requiredButtons: -1
+  requiredSelectable: {fileID: 0}
+  onFinger:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 198331614}
+        m_TargetAssemblyTypeName: MainMenuScript, Assembly-CSharp
+        m_MethodName: PlayGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  ScreenDepth:
+    Conversion: 1
+    Camera: {fileID: 0}
+    Object: {fileID: 0}
+    Layers:
+      serializedVersion: 2
+      m_Bits: 4294967291
+    Distance: 0
+  onWorld:
+    m_PersistentCalls:
+      m_Calls: []
+  onScreen:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1353247987
 GameObject:
   m_ObjectHideFlags: 0
@@ -4593,97 +4833,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1357121911}
   m_CullTransparentMesh: 1
---- !u!1 &1375762480
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1375762481}
-  - component: {fileID: 1375762483}
-  - component: {fileID: 1375762482}
-  - component: {fileID: 1375762484}
-  m_Layer: 5
-  m_Name: Background
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1375762481
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1375762480}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 198331618}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1375762482
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1375762480}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 7d452dd777de1744bbcd6970aab93fc6, type: 2}
-  m_Color: {r: 0.6981132, g: 0.067176916, b: 0.067176916, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 212812085965878549, guid: ef6ce21fa1320654c9ca24af3f07294f, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1375762483
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1375762480}
-  m_CullTransparentMesh: 1
---- !u!114 &1375762484
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1375762480}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26b5394b1e46b4e419a7e559e4b993b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MenuTextureScroll
-  ScrollSpeed: 0.075
-  ScrollDirection: {x: 1, y: -1}
-  ScrollImage: {fileID: 0}
 --- !u!1 &1389861716
 GameObject:
   m_ObjectHideFlags: 0
@@ -4696,6 +4845,7 @@ GameObject:
   - component: {fileID: 1389861720}
   - component: {fileID: 1389861719}
   - component: {fileID: 1389861718}
+  - component: {fileID: 1389861721}
   m_Layer: 5
   m_Name: BACK 1 or 2 Player Button
   m_TagString: Untagged
@@ -4817,6 +4967,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1389861716}
   m_CullTransparentMesh: 1
+--- !u!114 &1389861721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1389861716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb097c07812299498915a0a3e793843, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: LeanTouch::Lean.Touch.LeanFingerDown
+  ignoreStartedOverGui: 1
+  requiredButtons: -1
+  requiredSelectable: {fileID: 0}
+  onFinger:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 198331614}
+        m_TargetAssemblyTypeName: MainMenuScript, Assembly-CSharp
+        m_MethodName: SelectPlayModeBack
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  ScreenDepth:
+    Conversion: 1
+    Camera: {fileID: 0}
+    Object: {fileID: 0}
+    Layers:
+      serializedVersion: 2
+      m_Bits: 4294967291
+    Distance: 0
+  onWorld:
+    m_PersistentCalls:
+      m_Calls: []
+  onScreen:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1400537631
 GameObject:
   m_ObjectHideFlags: 0
@@ -4920,6 +5114,7 @@ GameObject:
   - component: {fileID: 1407087379}
   - component: {fileID: 1407087378}
   - component: {fileID: 1407087377}
+  - component: {fileID: 1407087380}
   m_Layer: 5
   m_Name: Prev Paddles
   m_TagString: Untagged
@@ -5041,6 +5236,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1407087375}
   m_CullTransparentMesh: 1
+--- !u!114 &1407087380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1407087375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb097c07812299498915a0a3e793843, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: LeanTouch::Lean.Touch.LeanFingerDown
+  ignoreStartedOverGui: 1
+  requiredButtons: -1
+  requiredSelectable: {fileID: 0}
+  onFinger:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 198331619}
+        m_TargetAssemblyTypeName: SkinManager, Assembly-CSharp
+        m_MethodName: PrevPaddleSkinOption
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  ScreenDepth:
+    Conversion: 1
+    Camera: {fileID: 0}
+    Object: {fileID: 0}
+    Layers:
+      serializedVersion: 2
+      m_Bits: 4294967291
+    Distance: 0
+  onWorld:
+    m_PersistentCalls:
+      m_Calls: []
+  onScreen:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1429973052
 GameObject:
   m_ObjectHideFlags: 0
@@ -5053,6 +5292,7 @@ GameObject:
   - component: {fileID: 1429973056}
   - component: {fileID: 1429973055}
   - component: {fileID: 1429973054}
+  - component: {fileID: 1429973057}
   m_Layer: 5
   m_Name: Next Paddles
   m_TagString: Untagged
@@ -5174,6 +5414,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1429973052}
   m_CullTransparentMesh: 1
+--- !u!114 &1429973057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1429973052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb097c07812299498915a0a3e793843, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: LeanTouch::Lean.Touch.LeanFingerDown
+  ignoreStartedOverGui: 1
+  requiredButtons: -1
+  requiredSelectable: {fileID: 0}
+  onFinger:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 198331619}
+        m_TargetAssemblyTypeName: SkinManager, Assembly-CSharp
+        m_MethodName: NextPaddleSkinOption
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  ScreenDepth:
+    Conversion: 1
+    Camera: {fileID: 0}
+    Object: {fileID: 0}
+    Layers:
+      serializedVersion: 2
+      m_Bits: 4294967291
+    Distance: 0
+  onWorld:
+    m_PersistentCalls:
+      m_Calls: []
+  onScreen:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1442799786
 GameObject:
   m_ObjectHideFlags: 0
@@ -5186,6 +5470,7 @@ GameObject:
   - component: {fileID: 1442799790}
   - component: {fileID: 1442799789}
   - component: {fileID: 1442799788}
+  - component: {fileID: 1442799791}
   m_Layer: 5
   m_Name: Pts to Win Up
   m_TagString: Untagged
@@ -5307,6 +5592,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1442799786}
   m_CullTransparentMesh: 1
+--- !u!114 &1442799791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1442799786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb097c07812299498915a0a3e793843, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: LeanTouch::Lean.Touch.LeanFingerDown
+  ignoreStartedOverGui: 1
+  requiredButtons: -1
+  requiredSelectable: {fileID: 0}
+  onFinger:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 198331614}
+        m_TargetAssemblyTypeName: MainMenuScript, Assembly-CSharp
+        m_MethodName: IncreasePointsToWin
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  ScreenDepth:
+    Conversion: 1
+    Camera: {fileID: 0}
+    Object: {fileID: 0}
+    Layers:
+      serializedVersion: 2
+      m_Bits: 4294967291
+    Distance: 0
+  onWorld:
+    m_PersistentCalls:
+      m_Calls: []
+  onScreen:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1465033077
 GameObject:
   m_ObjectHideFlags: 0
@@ -5958,6 +6287,64 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 859cc424aa866ec4a9965e3b98846891, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
+--- !u!1 &1702551392
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1702551394}
+  - component: {fileID: 1702551393}
+  m_Layer: 0
+  m_Name: LeanTouch
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1702551393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1702551392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fc98219a83dff145947365dc914d06e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: LeanTouch::Lean.Touch.LeanTouch
+  tapThreshold: 0.2
+  swipeThreshold: 100
+  referenceDpi: 200
+  guiLayers:
+    serializedVersion: 2
+    m_Bits: 32
+  useTouch: 1
+  useHover: 1
+  useMouse: 1
+  useSimulator: 1
+  disableMouseEmulation: 1
+  recordFingers: 1
+  recordThreshold: 5
+  recordLimit: 10
+--- !u!4 &1702551394
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1702551392}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1727220473
 GameObject:
   m_ObjectHideFlags: 0
@@ -6445,6 +6832,7 @@ GameObject:
   - component: {fileID: 1776556375}
   - component: {fileID: 1776556374}
   - component: {fileID: 1776556373}
+  - component: {fileID: 1776556376}
   m_Layer: 5
   m_Name: FWD 1 or 2 Player Button
   m_TagString: Untagged
@@ -6566,6 +6954,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1776556371}
   m_CullTransparentMesh: 1
+--- !u!114 &1776556376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1776556371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb097c07812299498915a0a3e793843, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: LeanTouch::Lean.Touch.LeanFingerDown
+  ignoreStartedOverGui: 1
+  requiredButtons: -1
+  requiredSelectable: {fileID: 0}
+  onFinger:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 198331614}
+        m_TargetAssemblyTypeName: MainMenuScript, Assembly-CSharp
+        m_MethodName: SelectPlayMode
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  ScreenDepth:
+    Conversion: 1
+    Camera: {fileID: 0}
+    Object: {fileID: 0}
+    Layers:
+      serializedVersion: 2
+      m_Bits: 4294967291
+    Distance: 0
+  onWorld:
+    m_PersistentCalls:
+      m_Calls: []
+  onScreen:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1784018599
 GameObject:
   m_ObjectHideFlags: 0
@@ -6750,6 +7182,7 @@ GameObject:
   - component: {fileID: 1850866565}
   - component: {fileID: 1850866564}
   - component: {fileID: 1850866563}
+  - component: {fileID: 1850866566}
   m_Layer: 5
   m_Name: Next Puck
   m_TagString: Untagged
@@ -6871,6 +7304,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1850866561}
   m_CullTransparentMesh: 1
+--- !u!114 &1850866566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1850866561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb097c07812299498915a0a3e793843, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: LeanTouch::Lean.Touch.LeanFingerDown
+  ignoreStartedOverGui: 1
+  requiredButtons: -1
+  requiredSelectable: {fileID: 0}
+  onFinger:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 198331619}
+        m_TargetAssemblyTypeName: SkinManager, Assembly-CSharp
+        m_MethodName: NextPuckOption
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  ScreenDepth:
+    Conversion: 1
+    Camera: {fileID: 0}
+    Object: {fileID: 0}
+    Layers:
+      serializedVersion: 2
+      m_Bits: 4294967291
+    Distance: 0
+  onWorld:
+    m_PersistentCalls:
+      m_Calls: []
+  onScreen:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1879203439
 GameObject:
   m_ObjectHideFlags: 0
@@ -6883,6 +7360,7 @@ GameObject:
   - component: {fileID: 1879203443}
   - component: {fileID: 1879203442}
   - component: {fileID: 1879203441}
+  - component: {fileID: 1879203444}
   m_Layer: 5
   m_Name: Prev BG
   m_TagString: Untagged
@@ -7004,6 +7482,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1879203439}
   m_CullTransparentMesh: 1
+--- !u!114 &1879203444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1879203439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb097c07812299498915a0a3e793843, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: LeanTouch::Lean.Touch.LeanFingerDown
+  ignoreStartedOverGui: 1
+  requiredButtons: -1
+  requiredSelectable: {fileID: 0}
+  onFinger:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 198331619}
+        m_TargetAssemblyTypeName: SkinManager, Assembly-CSharp
+        m_MethodName: PrevBGSkinOption
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  ScreenDepth:
+    Conversion: 1
+    Camera: {fileID: 0}
+    Object: {fileID: 0}
+    Layers:
+      serializedVersion: 2
+      m_Bits: 4294967291
+    Distance: 0
+  onWorld:
+    m_PersistentCalls:
+      m_Calls: []
+  onScreen:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1915444452
 GameObject:
   m_ObjectHideFlags: 0
@@ -7016,6 +7538,7 @@ GameObject:
   - component: {fileID: 1915444456}
   - component: {fileID: 1915444455}
   - component: {fileID: 1915444454}
+  - component: {fileID: 1915444457}
   m_Layer: 5
   m_Name: Next BG
   m_TagString: Untagged
@@ -7137,6 +7660,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1915444452}
   m_CullTransparentMesh: 1
+--- !u!114 &1915444457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1915444452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb097c07812299498915a0a3e793843, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: LeanTouch::Lean.Touch.LeanFingerDown
+  ignoreStartedOverGui: 1
+  requiredButtons: -1
+  requiredSelectable: {fileID: 0}
+  onFinger:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 198331619}
+        m_TargetAssemblyTypeName: SkinManager, Assembly-CSharp
+        m_MethodName: NextBGSkinOption
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  ScreenDepth:
+    Conversion: 1
+    Camera: {fileID: 0}
+    Object: {fileID: 0}
+    Layers:
+      serializedVersion: 2
+      m_Bits: 4294967291
+    Distance: 0
+  onWorld:
+    m_PersistentCalls:
+      m_Calls: []
+  onScreen:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1992562001
 GameObject:
   m_ObjectHideFlags: 0
@@ -7660,11 +8227,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3b5705794e9947438de6a26b78707b6, type: 3}
---- !u!1 &448647553296416195 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7620671936326244798, guid: a3b5705794e9947438de6a26b78707b6, type: 3}
-  m_PrefabInstance: {fileID: 448647553296416194}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1459750862262058572
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7730,11 +8292,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb057f7010314fa4d814fbe79b8c418a, type: 3}
---- !u!1 &1459750862262058573 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 874495805783152641, guid: cb057f7010314fa4d814fbe79b8c418a, type: 3}
-  m_PrefabInstance: {fileID: 1459750862262058572}
-  m_PrefabAsset: {fileID: 0}
 --- !u!212 &1459750862262058574 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 541167622555769844, guid: cb057f7010314fa4d814fbe79b8c418a, type: 3}
@@ -7863,11 +8420,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 459955a925546df4ca4ec3438443a253, type: 3}
---- !u!1 &2430620996963953759 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5406131879148444729, guid: 459955a925546df4ca4ec3438443a253, type: 3}
-  m_PrefabInstance: {fileID: 2430620996963953758}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2523058557203802566 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5881066102927174487, guid: cb057f7010314fa4d814fbe79b8c418a, type: 3}
@@ -8003,11 +8555,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c6d1c466f9234141bb472a3f0b5c853, type: 3}
---- !u!1 &5710455404035813562 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6039225018250720215, guid: 1c6d1c466f9234141bb472a3f0b5c853, type: 3}
-  m_PrefabInstance: {fileID: 5710455404035813561}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6823911938064495954
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8073,11 +8620,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c86d3a1ef7efeed4aad6a9747f897ee4, type: 3}
---- !u!1 &6823911938064495955 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6131917725012655426, guid: c86d3a1ef7efeed4aad6a9747f897ee4, type: 3}
-  m_PrefabInstance: {fileID: 6823911938064495954}
-  m_PrefabAsset: {fileID: 0}
 --- !u!212 &6823911938064495956 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 2565776525842790395, guid: c86d3a1ef7efeed4aad6a9747f897ee4, type: 3}
@@ -8092,3 +8634,4 @@ SceneRoots:
   - {fileID: 417537465}
   - {fileID: 19637340}
   - {fileID: 1544961373448877650}
+  - {fileID: 1702551394}

@@ -172,6 +172,6 @@ MonoBehaviour:
   GoalScored: 0
   ResetTime: 1
   GoalResetTime: 3
-  MaxPuckSpeed: 20
+  MaxPuckSpeed: 30
   PlayerAI: {fileID: 0}
   AM: {fileID: 0}
